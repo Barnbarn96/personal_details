@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Barnabas — DevOps Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f7f9; --card:#ffffff; --ink:#14171c; --muted:#5d6470; --line:#e3e6eb;
+    --accent:#0f766e; --accent-soft:#e6f4f2; --chip:#f0f2f5;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#0e1116; --card:#161a21; --ink:#e8eaee; --muted:#9aa2ae; --line:#262c36;
+           --accent:#2dd4bf; --accent-soft:#12302d; --chip:#1e232c; }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:720px;margin:0 auto;padding:32px 20px 56px}
+  header{display:flex;gap:16px;align-items:center;margin-bottom:24px}
+  .avatar{width:64px;height:64px;border-radius:16px;background:var(--accent);color:#fff;display:grid;place-items:center;font-weight:700;font-size:26px;flex:none}
+  h1{margin:0;font-size:26px;letter-spacing:-.02em}
+  .role{color:var(--muted);margin-top:2px}
+  .status{display:inline-flex;align-items:center;gap:6px;margin-top:8px;font-size:13px;font-weight:500;color:var(--accent);background:var(--accent-soft);padding:4px 10px;border-radius:999px}
+  .status::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent)}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;margin-bottom:14px}
+  h2{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0 0 12px;font-weight:600}
+  .facts{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  .fact .k{font-size:12px;color:var(--muted)}
+  .fact .v{font-weight:600}
+  @media (max-width:480px){.facts{grid-template-columns:1fr 1fr}}
+  .chips{display:flex;flex-wrap:wrap;gap:6px}
+  .chip{background:var(--chip);border-radius:8px;padding:4px 10px;font-size:13px}
+  ul{margin:0;padding-left:18px} li{margin:4px 0}
+  .proj{padding:12px 0;border-top:1px solid var(--line)} .proj:first-of-type{border-top:0;padding-top:0}
+  .proj b{display:block} .proj span{color:var(--muted);font-size:14px}
+  .proj a{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--accent);text-decoration:none}
+  .contact a{color:var(--accent);text-decoration:none;font-weight:500}
+  .contact div{margin:6px 0}
+  .blurb{font-family:"JetBrains Mono",monospace;font-size:12.5px;background:var(--chip);border-radius:10px;padding:14px;white-space:pre-wrap;margin:0 0 10px}
+  button{font:inherit;font-weight:600;font-size:14px;border:0;border-radius:10px;padding:10px 16px;background:var(--accent);color:#fff;cursor:pointer}
+  @media (prefers-color-scheme: dark){button{color:#06201d}}
+  .ph{color:var(--muted);font-style:italic}
+  .job{padding:12px 0;border-top:1px solid var(--line)} .job:first-of-type{border-top:0;padding-top:0}
+  .job b{display:block} .job .when{display:block;color:var(--muted);font-size:13px;margin-bottom:6px}
+  footer{color:var(--muted);font-size:12px;text-align:center;margin-top:20px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="avatar">B</div>
+    <div>
+      <h1>Barnabas Soh</h1>
+      <div class="role">DevOps Engineer · AWS · Platform / SRE</div>
+      <div class="status">Open to opportunities</div>
+    </div>
+  </header>
+
+  <section class="card">
+    <h2>Quick details</h2>
+    <div class="facts">
+      <div class="fact"><div class="k">Current role</div><div class="v">DevOps (Build) Engineer, UC Tech Pte Ltd</div></div>
+      <div class="fact"><div class="k">Experience</div><div class="v">4.5+ years (3+ in DevOps on AWS)</div></div>
+      <div class="fact"><div class="k">Location</div><div class="v">Singapore</div></div>
+      <div class="fact"><div class="k">Notice period</div><div class="v">1 month</div></div>
+      <div class="fact"><div class="k">Looking for</div><div class="v">DevOps · SRE · Platform Engineer</div></div>
+      <div class="fact"><div class="k">Languages</div><div class="v">English, Mandarin (spoken)</div></div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Certifications</h2>
+    <div class="chips">
+      <span class="chip">AWS Certified Solutions Architect – Associate (2024)</span>
+      <span class="chip">CKAD — Certified Kubernetes Application Developer (2025)</span>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Experience</h2>
+    <div class="job">
+      <b>DevOps (Build) Engineer — UC Tech Pte Ltd (contracted to IBM)</b>
+      <span class="when">May 2023 – Present · Government and defence programmes on AWS</span>
+      <ul>
+        <li>Provision AWS infrastructure (Lambda, SQS, KMS, cross-account IAM) with Terraform, reviewed through GitLab merge requests</li>
+        <li>Maintain GitLab CI/CD pipelines with build, test, SAST (Fortify) and dependency-scanning (OWASP Dependency-Check) stages and staged deployments</li>
+        <li>Deployed the Dynatrace Operator on an OpenShift cluster with Kubernetes manifests; onboarded Lambda functions to Dynatrace</li>
+        <li>Built a serverless multi-tenant onboarding service (TypeScript, Lambda) with Keycloak SSO via OIDC and LDAP</li>
+        <li>Built a Singpass/MyInfo integration supporting FAPI 2.0 and legacy authentication (Java, Spring Boot)</li>
+        <li>Root-caused a production duplicate-email incident to unhandled async errors in an SQS batch Lambda handler</li>
+        <li>Production support for the team's services, including deployments outside working hours</li>
+      </ul>
+    </div>
+    <div class="job">
+      <b>Associate Software Developer — Avensys Consulting (contracted to NCS)</b>
+      <span class="when">Mar 2022 – Apr 2023</span>
+      <ul>
+        <li>Migrated legacy VBScript automation to Java batch jobs, reducing downtime</li>
+        <li>Built Excel import/export modules and automated notification workflows (Java, .NET Core, C#)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Skills</h2>
+    <div class="chips">
+      <span class="chip">AWS</span><span class="chip">Lambda</span><span class="chip">API Gateway</span><span class="chip">SQS</span>
+      <span class="chip">DynamoDB</span><span class="chip">IAM</span><span class="chip">KMS</span><span class="chip">WAF</span>
+      <span class="chip">Terraform</span><span class="chip">GitLab CI/CD</span><span class="chip">Docker</span><span class="chip">Kubernetes / OpenShift</span>
+      <span class="chip">Dynatrace</span><span class="chip">CloudWatch</span><span class="chip">Fortify</span><span class="chip">OWASP Dependency-Check</span>
+      <span class="chip">TypeScript</span><span class="chip">Java / Spring Boot</span><span class="chip">Python</span><span class="chip">k6</span>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Education</h2>
+    <div><b>Bachelor of Computer Science (Honours)</b> — Universiti Tunku Abdul Rahman, 2018 – 2021</div>
+  </section>
+
+  <section class="card contact">
+    <h2>Contact</h2>
+    <div>Email: <a href="mailto:barnabassoh96@gmail.com">barnabassoh96@gmail.com</a></div>
+    <div>LinkedIn: <a href="https://thisisadomain.men/linkedin">LinkedIn</a></div>
+    <div>GitHub: <a href="https://github.com/Barnbarn96">github.com/Barnbarn96</a></div>
+    <div>Resume: <a href="resume.pdf" target="_blank">Download PDF</a></div>
+  </section>
+
+  <section class="card">
+    <h2>Copy for your notes</h2>
+    <pre class="blurb" id="blurb">Barnabas Soh — DevOps (Build) Engineer, UC Tech Pte Ltd (Singapore)
+Experience: 4.5+ years (3+ in DevOps on AWS for government and defence programmes)
+Stack: AWS, Terraform, GitLab CI/CD, Dynatrace, TypeScript, Java/Spring Boot
+Certs: AWS Solutions Architect – Associate, CKAD
+Notice period: 1 month
+Open to: DevOps / SRE / Platform Engineer roles
+Email: barnabassoh96@gmail.com
+GitHub: github.com/Barnbarn96</pre>
+    <button id="copy">Copy details</button>
+  </section>
+
+  <footer>Salary expectations and other personal details available on request.</footer>
+</div>
+<script>
+  document.getElementById('copy').addEventListener('click', async (e) => {
+    const btn = e.currentTarget;
+    try { await navigator.clipboard.writeText(document.getElementById('blurb').textContent); btn.textContent = 'Copied ✓'; }
+    catch { btn.textContent = 'Select the text above to copy'; }
+    setTimeout(() => btn.textContent = 'Copy details', 2500);
+  });
+</script>
+</body>
+</html>
